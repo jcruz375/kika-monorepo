@@ -19,7 +19,7 @@ const AdminLoginPage = () => {
         const authToken = response.data.token
         localStorage.setItem('AuthToken', authToken);
         const test = 'Bearer ' + localStorage.getItem('AuthToken')
-        console.log(api);
+        console.log(api.headers);
         return alert('login efetuado');
       })
       .catch((err) => {

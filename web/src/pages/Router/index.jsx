@@ -8,7 +8,8 @@ import DeliveryPage from '../DeliveryPage';
 import PromoPage from '../PromoPage';
 import RequestsPage from '../RequestsPage';
 import ContactPage from '../ContactPage';
-import AdminLoginPage from '../AdminPages/AdminLogin';
+import AdminLoginPage from '../../Admin/pages/AdminLogin';
+import AdminViewOrders from '../../Admin/pages/AdminViewOrders';
 
 
 function Router() {
@@ -22,6 +23,7 @@ function Router() {
                 <Route path="/pedidos" component={RequestsPage} exact />
                 <Route path="/contato" component={ContactPage} exact />
                 <Route path="/access/secret/user/admin" component={AdminLoginPage} exact/>
+                <Route path="/admin/view-orders-now" component={AdminViewOrders} exact/>
                 <Route component={NotFoundPage} />
             </Switch>
         </BrowserRouter>
