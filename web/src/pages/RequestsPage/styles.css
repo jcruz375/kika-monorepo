@@ -1,0 +1,58 @@
+#order-data{
+    margin-top: 3%;
+}
+
+#order-data label {
+    font: 400 2.5rem Nunito;
+    color: var(--color-secundary);
+}
+
+#order-data input {
+    height: 5rem;
+    font: 700 2rem Nunito;
+    
+}
+
+#order-data select {
+    height: 5rem;
+    font: 700 2rem Nunito;
+    
+}
+
+#order-data textarea {
+    font: 700 2rem Nunito;
+    
+}
+
+#order-data .button {
+    font: 700 2rem Nunito;
+    border-radius: 2rem;
+}
+
+hr {
+    background: var(--color-secundary);
+}
+
+#order-data .basket {
+    margin-top: 3%;
+}
+
+#order-data .basket .basket-header{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1.5rem;
+    background: var(--color-primary-lighter);
+}
+
+#order-data .basket .basket-header {
+    font: 700 2.9rem Nunito;
+    color: var(--color-secundary-dark);
+}
+
+#order-data .basket .basket-body {
+    font: 400 2.5rem Nunito;
+}
+
+#order-data .basket .basket-body .basket-body-content {
+    margin-top: 2%;
+} 

@@ -1,0 +1,28 @@
+#contactPage-content {
+    position: relative;
+    top: 10rem;
+}
+
+hr {
+    background: var(--color-secundary);
+}
+
+#contactPage-content h1 {
+    font: 700 3rem Ubuntu;
+    color: var(--color-secundary);
+}
+
+#contactPage-content ul {
+    margin-left: 6%;
+    margin-top: 3%;
+}
+
+#contactPage-content ul li {
+    font: 400 2.5rem Nunito;
+    color: var(--color-secundary-dark);
+    margin-bottom: 5%;
+}
+
+#contactPage-content ul li a {
+    margin-left: 2%;
+}
