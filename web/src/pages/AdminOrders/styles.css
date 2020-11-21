@@ -1,0 +1,16 @@
+.orders-container {
+  position: relative;
+  left: 5%;
+  width: 90%;
+  overflow: auto;
+}
+
+.order-card {
+  width: 35rem;
+  color:#000;
+}
+
+.order-actions {
+  display: flex;
+  justify-content: space-evenly;
+}

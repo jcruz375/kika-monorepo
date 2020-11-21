@@ -1,8 +1,8 @@
 import React, { useState, } from 'react';
 
-import api from '../../../services/api';
-import PageMain from '../main';
-import Input from '../../../components/Input';
+import api from '../../services/api';
+import PageMain from '../../Admin/main';
+import Input from '../../components/Input';
 
 import './styles.css'
 
@@ -18,12 +18,9 @@ const AdminLoginPage = () => {
       .then(response => {
         const authToken = response.data.token
         localStorage.setItem('AuthToken', authToken);
-        const test = 'Bearer ' + localStorage.getItem('AuthToken')
-        console.log(api.headers);
-        return alert('login efetuado');
+        alert('login efetuado');  
       })
       .catch((err) => {
-        console.log(err)
         return alert('Erro no login');
       });
 

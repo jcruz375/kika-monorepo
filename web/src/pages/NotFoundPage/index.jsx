@@ -33,7 +33,7 @@ margin-left: auto;
 function NotFoundPage() {
 	return (
 		<>
-		<Link to="/access/secret/user/admin" id="link-login-admin"> admin - Login </Link>
+		<Link to="/login" id="link-login-admin"> admin - Login </Link>
 			<Page>
 				<Image />
 				<br />
