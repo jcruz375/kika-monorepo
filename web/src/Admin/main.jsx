@@ -20,8 +20,8 @@ const PageMain = ({ children }) => {
     <Main>
       <header>
         <Link to="/admin/andamento">Andamento</Link>
-        <Link to="/login">Produtos (construindo)</Link>
-        <Link to="/login">Categorias (construindo)</Link>
+        <Link to="/admin/confirmados">confirmados</Link>
+        <Link to="/admin/cancelados">cancelados</Link>
       </header>
       {children}
     </Main>

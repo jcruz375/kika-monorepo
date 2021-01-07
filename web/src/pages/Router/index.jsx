@@ -12,6 +12,8 @@ import RequestsPage from '../RequestsPage';
 import ContactPage from '../ContactPage';
 import AdminLoginPage from '../AdminLogin';
 import AdminOrders from '../AdminOrders';
+import AdminConfirmedOrders from '../AdminConfirmedOrders';
+import AdminCanceledOrders from '../AdminCanceledOrders';
 
 
 function Router() {
@@ -26,6 +28,8 @@ function Router() {
 				<Route path="/contato" component={ContactPage} exact />
 				<Route path="/login" component={AdminLoginPage} exact />
 				<PrivateRoute path="/admin/andamento" component={AdminOrders} exact />
+				<PrivateRoute path="/admin/confirmados" component={AdminConfirmedOrders} exact />
+				<PrivateRoute path="/admin/cancelados" component={AdminCanceledOrders} exact />
 				<Route component={NotFoundPage} />
 			</Switch>
 		</BrowserRouter>

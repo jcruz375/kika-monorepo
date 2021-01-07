@@ -21,6 +21,7 @@ const AdminLoginPage = () => {
         alert('login efetuado');  
       })
       .catch((err) => {
+        console.log(err);
         return alert('Erro no login');
       });
 

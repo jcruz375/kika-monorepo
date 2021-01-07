@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect} from 'react';
 import PageRoot from '../../components/PageRoot';
 import { Link } from 'react-router-dom';
 
@@ -15,6 +15,7 @@ function RequestsPage() {
   const [address, setAddress] = useState('');
   const [payment, setPayment] = useState('');
   const [observations, setObservations] = useState('');
+  const [requestsNames, setRequetsNames] = useState([]);
 
   const products = JSON.parse(localStorage.getItem("products")) || [];
   const promos = JSON.parse(localStorage.getItem("promos")) || [];
@@ -22,6 +23,15 @@ function RequestsPage() {
   const promosPrice = JSON.parse(localStorage.getItem("promosPrice")) || [];
   const pricesGroup = [productsPrice, promosPrice];
 
+  useEffect(() => {
+    const orderAndPromos = products.concat(promos);
+    const names = orderAndPromos.map(request => {
+      return request.name
+    });
+    setRequetsNames(names)
+  }, []);
+  //console.log(requestsNames)
+  
   var totalPrice = 0;
   for (var i = 0; i < pricesGroup.length; i++) {
     totalPrice += pricesGroup[i];
@@ -34,24 +44,22 @@ function RequestsPage() {
     localStorage.setItem("promosPrice", JSON.stringify([]));
 
   }
-
+  
   function handleCreateOrder() {
-    const orderProducts = products.concat(promos);
     api.post('orders', {
       client,
       contact,
       adress: address,
       payment: payment,
       observations,
-      products: JSON.stringify(orderProducts),
+      products: JSON.stringify(requestsNames),
       price: totalPrice
     }).then(() => {
       alert(`pedido realizado! Preço: R$${totalPrice} + Taxa de entrega!`)
     }).catch((err) => {
       console.log(err)
-      alert('Erro no cadastro do pedido');
+      alert('Erro no cadastro do pedido, por favor conclua seu pedido pelo nosso whatsapp!');
     });
-
   }
   return (
     <PageRoot>

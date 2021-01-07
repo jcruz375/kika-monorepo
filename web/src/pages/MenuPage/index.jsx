@@ -30,7 +30,9 @@ function MenuPage() {
 			...pricesGroup,
 			price
 		]);
+		alert('Lanche adicionado a cesta!')
 	}
+
 	var totalPrice = 0;
 	if (basket) {
 		for (var i = 0; i < pricesGroup.length; i++) {

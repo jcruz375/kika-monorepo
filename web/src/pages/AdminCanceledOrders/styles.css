@@ -1,7 +1,7 @@
 .orders-container {
   position: relative;
-  left: 5%;
-  width: 90%;
+  left: 1%;
+  width: 100%;
   overflow: auto;
   display: flex;
 }
@@ -12,11 +12,8 @@
   margin-left: 3%;
 }
 
-.order-actions {
-  display: flex;
-  justify-content: space-evenly;
-}
 
-.order-actions button {
-  width: 15rem;
+.order-status {
+  background: #dc3545;
+  font: 700 4rem Nunito;
 }
